@@ -1,28 +1,28 @@
-# 🤖 NexBot — AI-Powered Customer Support Chatbot
+# NexBot — AI-Powered Customer Support Chatbot
 
 An intelligent chatbot built with **NLP**, **Flask**, and **SQLite** that handles customer support queries with contextual responses and full interaction logging.
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
-![Flask](https://img.shields.io/badge/Flask-3.0-black?logo=flask)
-![NLTK](https://img.shields.io/badge/NLTK-3.8-green)
-![SQLite](https://img.shields.io/badge/SQLite-3-blue?logo=sqlite)
-![License](https://img.shields.io/badge/License-MIT-green)
+![Python]
+![Flask]
+![NLTK]
+![SQLite]
+![License]
 
 ---
 
-## ✨ Features
+## Features
 
-- 💬 Real-time chat interface with typing indicator
-- 🧠 NLP intent classification using NLTK (lemmatization, tokenization, stopword filtering)
-- 📋 **Logs panel** — full interaction history stored in SQLite
-- 📊 **Analytics dashboard** — message counts, session stats, top intents
-- ⚡ Quick-topic chips for one-click queries
-- 🌗 Responsive dark UI with sidebar navigation
-- 🔌 REST API for integration with other apps
+-  Real-time chat interface with typing indicator
+-  NLP intent classification using NLTK (lemmatization, tokenization, stopword filtering)
+-  **Logs panel** — full interaction history stored in SQLite
+-  **Analytics dashboard** — message counts, session stats, top intents
+-  Quick-topic chips for one-click queries
+-  Responsive dark UI with sidebar navigation
+-  REST API for integration with other apps
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer      | Technology                          |
 |------------|-------------------------------------|
@@ -34,7 +34,7 @@ An intelligent chatbot built with **NLP**, **Flask**, and **SQLite** that handle
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the repository
 
@@ -70,7 +70,7 @@ Open **http://localhost:5000** in your browser.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 ai-chatbot/
@@ -88,7 +88,7 @@ ai-chatbot/
 
 ---
 
-## 🔌 API Reference
+##  API Reference
 
 ### `POST /chat`
 ```json
@@ -107,7 +107,7 @@ Returns total messages, sessions, and top intents.
 
 ---
 
-## 🧠 Supported Intents
+##  Supported Intents
 
 | Intent    | Example queries                              |
 |-----------|----------------------------------------------|
@@ -124,6 +124,6 @@ Returns total messages, sessions, and top intents.
 
 ---
 
-## 📜 License
+##  License
 
 MIT © 2024
