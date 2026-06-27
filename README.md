@@ -124,6 +124,3 @@ Returns total messages, sessions, and top intents.
 
 ---
 
-##  License
-
-MIT © 2024
