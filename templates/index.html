@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NexBot — AI Customer Support</title>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-avatar">N</div>
+      <div>
+        <div class="brand-name">NexBot</div>
+        <div class="brand-status"><span class="status-dot"></span>Online</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <button class="nav-btn active" onclick="showPanel('chat')">
+        <span class="nav-icon">💬</span> Chat
+      </button>
+      <button class="nav-btn" onclick="showPanel('logs')">
+        <span class="nav-icon">📋</span> Logs
+      </button>
+      <button class="nav-btn" onclick="showPanel('stats')">
+        <span class="nav-icon">📊</span> Stats
+      </button>
+    </nav>
+
+    <div class="sidebar-topics">
+      <div class="topics-label">Quick Topics</div>
+      <button class="topic-chip" onclick="sendQuick('Track my order')">Track order</button>
+      <button class="topic-chip" onclick="sendQuick('I need a refund')">Refund</button>
+      <button class="topic-chip" onclick="sendQuick('What are your hours?')">Hours</button>
+      <button class="topic-chip" onclick="sendQuick('How do I contact support?')">Contact</button>
+      <button class="topic-chip" onclick="sendQuick('Tell me a joke')">Joke 😄</button>
+    </div>
+
+    <div class="sidebar-footer">
+      <button class="clear-btn" onclick="clearChat()">Clear Chat</button>
+      <div class="session-label" id="sessionLabel">Session initializing…</div>
+    </div>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- Chat Panel -->
+    <div class="panel active" id="panel-chat">
+      <div class="chat-header">
+        <div class="chat-title">Customer Support</div>
+        <div class="chat-subtitle">Powered by NLP · NLTK · SQLite</div>
+      </div>
+
+      <div class="messages" id="messages">
+        <div class="message bot">
+          <div class="msg-avatar">N</div>
+          <div class="msg-body">
+            <div class="bubble">
+              Hello! I'm NexBot, your AI-powered support assistant.<br><br>
+              I can help you with orders, refunds, account issues, pricing, and more.<br>
+              How can I help you today?
+            </div>
+            <div class="msg-meta">NexBot · just now</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-bar">
+        <textarea id="msgInput" placeholder="Type your message…" rows="1" onkeydown="handleKey(event)"></textarea>
+        <button class="send-btn" id="sendBtn" onclick="sendMessage()">&#10148;</button>
+      </div>
+    </div>
+
+    <!-- Logs Panel -->
+    <div class="panel" id="panel-logs">
+      <div class="chat-header">
+        <div class="chat-title">Interaction Logs</div>
+        <div class="chat-subtitle">Full conversation history from SQLite</div>
+      </div>
+      <div class="logs-body" id="logsBody">
+        <div class="empty-state">Send a message first, then view logs here.</div>
+      </div>
+    </div>
+
+    <!-- Stats Panel -->
+    <div class="panel" id="panel-stats">
+      <div class="chat-header">
+        <div class="chat-title">Analytics Dashboard</div>
+        <div class="chat-subtitle">Live usage stats from the database</div>
+      </div>
+      <div class="stats-body" id="statsBody">
+        <div class="empty-state">Loading stats…</div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="/static/js/main.js"></script>
+</body>
+</html>
